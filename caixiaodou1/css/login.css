@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#fff; color:#555; font-size:12px; font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:12px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; }
+a:hover { text-decoration:none; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;} 
+
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+ a:link {color:#000}/* 未访问的链接 */
+ a:visited {color:#60F}	/* 已访问的链接 */
+ a:hover {color:#F00}	/* 鼠标移动到链接上 */
+ a:active {color:#000}	/* 选定的链接 */
+ 
+ .login
+ {
+	 width:1051px;
+	 height:544px;
+	 /*background:url(../images/login_1.png) repeat-x;*/
+	 background:#FFCD9C; 
+ }
+ .login_left
+ {
+	/* background:url(../images/login_adv.jpg);*/
+	float:left;
+	width:568px;
+	height:471px;
+	margin-left:60px;
+	margin-top:11px;  
+ }
+ .login_left img
+ {
+	width:568px;
+	height:471px; 
+	
+ }
+ 
+ .login_right_up
+ {	
+	 width:356px;
+	 height:57px;
+	 float:right;
+ }
+ 
+ .text1
+ {
+	 float:left;
+	 width:125px;
+	 line-height:57px;
+	 font-size:28px;
+	 font-weight:bolder;
+	 padding-left:31px;
+ }
+ 
+  .text2
+ {
+	 float:left;
+	 width:60px;
+	line-height:57px;
+	 font-size:12px;
+	 padding-left:10px;
+ }
+ 
+  .text3 a
+ {
+	 float:left;
+	 width:100px;
+	 line-height:57px;
+	 font-size:16px;
+	 font-weight:bolder;
+ }
+ 
+ .login_right_down
+ {
+	 /*border:1px solid #006;*/
+	 /*padding-top:86px;*/
+	 float:right;
+	 width:356px;
+	 height:370px;
+	 background-color:#FEEA99;
+	
+ }
+ span.star
+ {
+	 margin-left:31px;
+	 color:red;
+	 font-size:14px;
+	 
+ }
+ 
+  span.pn
+ {
+	 font-size:14px;
+ }
+.seg input {
+ 	margin-top: 10px;
+ 	margin-bottom: 50px;
+ }
+.seg p{
+ margin-left: 10px;
+ /*display: inline;*/
+ display: none;
+ color: #666;
+font-size:12px;
+}
+ input.frame
+ {
+	 background-color:#D7D7D7;
+	 margin-left:31px;
+	 width:294px;
+	 height:29px;
+ }	
+ 
+ a.repassword
+ {
+	/*border:1px solid #006;*/
+	margin-left:31px;
+	font-size:14px;
+ }
+
+ .seg
+ {	 
+ 	/*border:1px solid #006;*/
+ 	margin-top: 55px;
+	margin-bottom:126px;
+ }
+ input.submit
+ {	 
+ 	 /*border:1px solid #006;*/
+	 background-color:#D51B20;
+	 font-weight:bold;
+	 font-size:18px;
+	 width:356px;
+	 height:29px;
+	 margin-top:45px;
+	 color:#FFF;
+ }
+ 
+ .footer img
+ {
+	 margin:0 auto;	 
+ }

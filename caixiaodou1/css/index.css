@@ -1,0 +1,320 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:12px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; }
+a:hover { text-decoration:none; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;} 
+
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; } 
+ a:link {color:#000}/* 未访问的链接 */
+ a:visited {color:#000}	/* 已访问的链接 */
+ a:hover {color:#F00}	/* 鼠标移动到链接上 */
+ a:active {color:#F30}	/* 选定的链接 */
+ 
+body
+{
+	background-color:#FFF;	
+}
+
+/* 页面头部制作*/
+
+.top
+{
+	/*width:100%;*/ /*占满整个界面*/	
+	height:45px;
+	background:url(../images/top_bg.jpg) repeat-x;  /*水平重复*/
+	/*background-color:#FAFAFA;*/
+}
+
+ /*页面主体部分*/
+ 
+ .wrap
+ {
+	width:1051px;
+	margin:0 auto;
+ }
+ .logo
+ {
+	height:70px;
+	background-color:#FF3300;   /*logo区背景颜色*/
+ }
+ .logo_left
+ {
+	width:100px;
+	float:left;
+	padding:15px;
+	/*line-height:70px;*/ 
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	color:#FFF;
+ }
+ .logo_mid
+ {
+	width:300px; 
+	float:right;
+	margin-top:15px;
+	margin-right:300px;
+ }
+ .logo_mid img
+ {
+	 /*vertical-align:middle;*/ /*控制图片在垂直方向上的位置	*/
+	  
+ }
+ .logo_mid a
+ {
+
+	padding-left:10px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:30px;
+	font-weight:bold;
+ }
+ 
+ .logo_mid a:link,.logo_mid a:visited    /*设置初始状态和访问过后的状态*/
+ {
+	text-decoration:none; 
+	color:#861317;
+ }
+ .nav
+ {
+	height:77px;
+	border-bottom: 10px solid #FFF;
+	background-color:#F30;   /*nav区背景颜色*/
+ }
+ .nav_left
+ {
+	width:500px;
+	padding-left:80px;
+ }
+ .nav_left li
+ {
+	 float:left;
+	 list-style-type:none;
+	 /*width:80px;*/  /*设置li的固定宽度*/
+	 text-align:center;  /* 文本居中对齐*/
+	/* line-height:77px;*/   /*设置行高与盒子的高度相同，可以使盒子中的内容在垂直方向上居中*/
+	 
+	 font-family:Arial, Helvetica, sans-serif;
+	 font-size:18px;
+	 color:#FFF;
+ }
+ li.one
+ {
+ 	/*border: 1px solid red;*/
+	font-size:36px; 
+	display: inline;
+	padding-top:15px;
+ }
+ li.two,li.three,li.four,li.five,li.six
+ {
+ 	/*border: 1px solid red;*/
+	padding-left:20px;
+	display: inline; 
+	padding-top:30px;
+ }
+ .nav_right
+ {
+	width:551px;
+	padding-left:450px; 
+ }
+ .nav_right_up
+ {
+	 width:551px;
+	 height:37px;
+	 padding-left:110px;
+ }
+ .nav_right_up li
+ {
+	  float:left;
+	 list-style-type:none;
+	 /*width:80px;*/  /*设置li的固定宽度*/
+	 text-align:center;  /* 文本居中对齐*/
+	 line-height:37px;   /*设置行高与盒子的高度相同，可以使盒子中的内容在垂直方向上居中*/
+	 
+ }
+ .nav_right_up a:link,.nav_right_up a:visited
+ {
+	 text-decoration:none;
+	 font-family:Arial, Helvetica, sans-serif;
+	 color:#fff;
+ }
+ .nav_right_up a:hover,.nav_right_up a:active
+ {
+	 text-decoration:none;
+	 font-family:Arial, Helvetica, sans-serif;
+	 color:#0F0;
+ }
+ .nav_right_down
+ {
+	padding-top:5px; 
+	padding-left:250px;
+ }
+ li.one1 a,li.two1 a
+ {
+	font-size:24px; 
+	padding-left:5px;
+ }
+  li.three1 a,li.four1 a,li.five1 a,li.six1 a
+ {
+	font-size:18px;
+	padding-left:15px; 
+	padding-top:0px;
+ }
+ 
+ /*焦点图制作*/
+ /*小提示：myFocus CSS样式规则常见定义有："pic"(主图)、"txt"(文字)、"num"(数字按钮)、"thumb"(略缩图)。*/
+ .focusPic
+ {
+	width:1051px;
+	margin:0 auto;
+	/*width:877px;*/
+	height:462px;
+	overflow:hidden; /*溢出当前div的范围，则隐藏*/ 
+ }
+ .focusPic_right
+ {
+	
+ }
+ 
+ /*主菜单制作*/
+ 
+ .main
+ {
+	width:1000px;
+	margin-left:50px; 
+ }
+ .course
+ {
+	margin-top:0px; 
+ }
+ .course_left,.course_right
+ {
+	width:450px;
+	height:250px;
+	float:left;
+	/*line-height:50px; */
+ }
+ .course_right
+ {
+	margin-left:100px; 
+	
+ }
+ .course_left a,.course_right a
+ {
+	text-decoration:none;
+	color:#300;
+	font-family:"Microsoft YaHei UI";
+	font-size:20px; 
+	padding-top:0px;
+	
+ }
+ .tips_left li,.course_left img,.course_right img
+ {
+	float:left;
+	list-style-type:none; 
+	margin:0 20px;
+ }
+ .tips_right li
+ {
+	float:left;
+	list-style-type:none; 
+	/*margin:0 20px;*/
+	
+ }
+ p.one,p.two
+ {
+	padding-top:50px;
+	
+ }
+ p.one
+ {
+	font-family:"Microsoft YaHei UI";
+	font-size:16px;
+	font-weight:100; 
+ }
+ p.two
+ {
+	font-family:"Microsoft YaHei UI";
+	font-size:18px;
+	font-weight:bold;
+ }
+ p.three
+ {
+	padding-top:35px; 
+	font-family:"Microsoft YaHei UI";
+	font-size:18px;
+	font-weight:400;
+ }
+ 
+ img.chg
+ {
+	padding-top:24px;
+	padding-right:0px; 
+ }
+ .tips_left li.tips1
+ {
+	font-size:24px;
+	font-weight:bold;
+	color:#F00;
+	padding-left:15px; 
+ }
+ .tips_left li.tips2
+ {
+	font-size:14px;
+	color:#F00;
+	padding-left:50px; 
+ }
+ .tips_right li.tips1
+ {
+	font-size:24px;
+	font-weight:bold;
+	color:#F00;
+	padding-left:300px; 
+ }
+ .tips_right li.tips2
+ {
+	font-size:14px;
+	color:#F00;
+	padding-left:80px; 
+ }
+ .seg  /* 分割线*/
+ {
+	
+ }
+ /*页脚制作*/
+ 
+ .footer
+ {
+	
+ }
+ .footer_up
+ { 
+	text-align:center;	/*水平居中*/
+ }
+ 
+ .footer_down
+ {
+	width:1051px;
+	height:100px;
+	margin:0 auto;
+	background:#FF3300;
+	
+ }
+ h3
+ {
+	padding-top:30px;
+	text-align:center;
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+	font-weight:200;
+ }
+ 

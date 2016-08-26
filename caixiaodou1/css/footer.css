@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+ /*页脚制作*/
+ 
+ .footer
+ {
+	
+ }
+ .footer_up
+ { 
+	text-align:center;	/*水平居中*/
+ }
+ 
+ .footer_down
+ {
+	width:1051px;
+	height:100px;
+	margin:0 auto;
+	background:#FF3300;
+	
+ }
+ h3
+ {
+	padding-top:30px;
+	text-align:center;
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+	font-weight:200;
+ }
+ 

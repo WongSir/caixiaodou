@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="js/caidou.js"></script> <!--自己动手编写的js--> 
+    <title>菜兜</title>
+    
+    <link href="css/main.css" rel="stylesheet" type="text/css" /> <!--自己动手编写的css-->
+	<link href="css/header.css" rel="stylesheet" type="text/css" />
+	<link href="css/footer.css" rel="stylesheet" type="text/css" />
+	<link href="css/caidou.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="Keywords" content="basket">
+    <meta name="decription" content="caidou-basket">
+
+</head>
+
+<body>
+<div class="top"> <!--top开始-->
+	<div class="top_content"> <!--top_content开始-->
+    	
+    </div>  <!--top_content结束-->
+</div>   <!--top结束-->
+
+<div class="wrap"> <!--html页面最外端盒子 wrap开始-->
+
+	<div class="logo"> <!--logo区开始-->
+    	<div class="logo_left">
+            	嘿、{if $smarty.session.loginFlag} {$smarty.session.userName}
+                {else}菜小兜{/if}
+            </div>
+        <div class="logo_mid">
+        	<img src="images/logo_mid.png" /><a href="index.php">菜小兜</a>
+        </div>
+    </div> <!--logo区结束-->
+    
+    <div class="nav"> <!--导航区nav开始-->
+    	<div class="nav_left">
+        	<ul>
+            	<li class="one">口味</li>
+                <li class="two">全部菜品</li>
+                <li class="three">新品推荐</li>
+                <li class="four">素菜</li>
+                <li class="five">荤菜</li>
+                <li class="six">汤菜</li>
+            </ul>
+        </div>
+        <div class="nav_right"> <!--nav_right开始-->
+        	<div class="nav_right_up">
+            	<ul>
+                	{if $smarty.session.loginFlag}
+                        <li class="one1"><a href="index.php?op=member">{$smarty.session.userName}</a></li>
+                      {else}
+                        <li class="one1"><a href="index.php?op=login">登陆</a></li>
+                          <li class="two1"><a href="index.php?op=register">注册</a></li>
+                      {/if}
+                    <li class="three1"><a href="#">开始订餐</a></li>
+                    <li class="four1"><a href="index.php?op=member">会员中心</a></li>
+                    <li class="five1"><a href="index.php?op=help">帮助中心</a></li>
+                    <li class="six1"><a href="index.php?op=caidou">我的菜兜</a></li>
+                </ul>
+            </div>
+            <div class="nav_right_down">
+            	<table>
+                	<td>
+                    	<select name="place" size="1">
+                        	<option value="none">---自提点选择---</option>
+                            <option value="">江夏</option>
+                            <option value="">五山</option>
+                            <option value="">大学城南</option>
+                        </select>
+                    </td>
+                </table>
+            </div>
+        </div>  <!--nav_right结束-->
+    </div> <!--导航区nav结束-->
+
+    <table id="basketTable"><!-- 菜兜表格开始 -->
+        <thead><!-- 表头 -->
+            <tr>
+                <th><label><input class="check-all check" type="checkbox" />&nbsp;全选</label></th>
+                <th>菜品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+        </thead><!-- 表头结束 -->
+        <tbody><!-- 表体 -->
+        {section name=cart loop=$myCart}
+            <tr>
+                <td class="check-box"><input class="check-one check"type="checkbox" /></td>
+                <td class="goods"><img src="images/goods01.jpg" alt="goods" /><span>{$myCart[cart].productName}</span></td>
+                <td class="price">{$myCart[cart].productPrice}</td>
+                <td class="count"><span class="reduce">-</span><input class="count-input"    type="text" value="{$myCart[cart].productNum}" />
+                   <span class="add">+</span></td>
+                <td class="sub-total">{$myCart[cart].priceTotal}</td>
+                <!-- 隐藏productId，传值到js文件 -->
+                <td class="operation"><span class="delete">删除</span><input class="count-input"    type="hidden" value="{$myCart[cart].productId}" /></td>
+            </tr>
+        {/section}
+                       
+        </tbody><!-- 表体结束 -->
+    </table><!-- 菜兜表格结束 -->
+    <div class="foot" id="foot"><!-- 脚部信息 -->
+        <label class="fl selectAll"><input type="checkbox" class="check-all check" />&nbsp;全选</label>
+        <a href="javascript:;" class="fl delete" id="deleteAll">删除</a>
+        <div class="fr costing"><a href="index.php?op=userMakeOrder">结算</a></div>
+        <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+        <div class="fr selected" id="selected">已选商品
+        <span id="selectTotal">0</span>件
+        <span class="arrow up">︽</span>
+        <span class="arrow down">︾</span>
+        </div>
+        <div class="selected-view">
+            <div id="selectedViewList" class="clearfix">
+                <!--<div><img src="images/1.jpg"><span>取消选择</span></div>-->
+            </div>
+            <span class="arrow">◆<span>◆</span></span>
+        </div>
+</div>
+    </div><!-- 脚部信息结束 -->
+
+    <div class="footer"> <!--页尾footer开始-->
+        <div class="footer_up">
+            <img src="images/footer_up1.png" />
+        </div>
+        <div class="footer_down">
+            <h3>版权所有 © 菜小兜 2015 All Rights Reserved 京ICP备14009300
+                <br />技术支持 弄潮少年团队</h3>
+        </div>
+    </div>  <!--footer结束-->
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?php
+	
+	if (isset($_COOKIE["num"]))
+		$num = $_COOKIE["num"];
+	else
+		$num = 0;
+		$num = $num +1;
+
+		setcookie("num",$num, time()+3600);
+
+
+?>
+<html>
+<body>
+
+<?php
+
+if( $num>1 )
+	echo("您已是第" . $num . "次访问本站点了。");
+
+else
+	echo("欢迎您首次访问本站！"); 
+
+?> 
+
+</body>
+
+</html>

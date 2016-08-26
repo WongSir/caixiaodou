@@ -1,0 +1,286 @@
+@charset "utf-8";
+/* CSS Document */
+
+ /*主菜单制作*/
+
+ /*焦点图制作*/
+ /*小提示：myFocus CSS样式规则常见定义有："pic"(主图)、"txt"(文字)、"num"(数字按钮)、"thumb"(略缩图)。*/
+ /*.focusPic
+ {
+	width:1051px;
+	margin:0 auto;
+	/*width:877px;*/
+/*	height:462px;
+	overflow:hidden; /*溢出当前div的范围，则隐藏*/ 
+ /*}
+ .focusPic_right
+ {
+	
+ }*/
+ 
+ .main{
+	margin:0 auto;
+	width:1100px; 
+ }
+ 
+/*box-sizing属性：规定两个并排的带边框的框*/
+
+a,a:visited{
+	color:#333;
+	text-decoration:none;
+	cursor:pointer;	
+}
+ul,ol{
+	list-style-type:none;	
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+
+/*左边样式*/
+.product-grid{
+	width:100%;	
+}
+
+div{
+	outline:0 none;
+}
+*,*:before,*:after{
+	box-sizing:inherit;	
+}
+
+.product-grid
+.product{
+	display:inline-block;
+	vertical-align:top;  /*把元素的顶端与行中最高元素的顶端对齐*/
+	width:500px;
+	height:316px;
+	/*height:auto;*/
+	padding:20px;
+	float:left;
+	overflow:hidden; /*overflow 属性规定当内容溢出元素框时发生的事情*/
+}
+
+.product-grid
+.image{
+	display:block;
+	text-align:center;
+	float:left;
+	width:249px;
+	/*height:auto;*/
+	height:280px;
+	padding:12px;
+	background-color:#ff f;
+}
+
+.product-grid
+.image a{
+	vertical-align:middle;	
+}
+
+.product-grid
+.product .product_image_ul{
+	cursor:pointer;	
+}
+.product-grid
+.image .product_image_ul{
+	margin-top:5px;	
+}
+
+[class*="product_image_ul"]{
+	display:block;
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	zoom:1;	
+}
+
+[class*="product_image_ul"]:before,[class*="product_image_ul"]:after{
+	content: " ";
+	display:table;	
+}
+[class*="product_image_ul"]:after{
+	clear:both;	
+}
+
+.product-grid
+.image .product_image_ul li{
+	height:35px;
+	width:120px;
+	line-height:35px;
+	border-right:1px solid #ddd;	
+}
+.product-grid
+.image .product_image_ul li:last-child{
+	border-right:none;
+}
+
+.product-grid
+.image .product_image_ul li span{
+	display:inline-block;
+	width:45px;
+}
+#unique{
+	width:80px;	
+}
+
+@media only screen 
+.product_image_ul >li:nth-of-type(3n+1){
+	cleat:both;
+}
+@media only screen 
+.product_image_ul >li:nth-of-type(n){
+	clear:none;	
+}
+.product_image_ul >li{
+	width:33.33333333%;	
+}
+[class*="product_image_ul"]>li{
+	display:block;
+	height:auto;
+	float:left;	
+}
+
+
+.icon-small{
+	padding-left:35px;
+	width:55px;
+	display:inline-block;
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+
+.image_ul_li_heart{
+	background-image:url(../images/tips_1.png);	
+	
+}
+.image_ul_li_cooking{
+	background-image:url(../images/tips_2.png);
+}
+
+/*右边样式*/
+
+.product .product_rc{
+/*	border:1px solid red;*/
+	position:relative;
+	float:right;
+	width:200px;
+	height:100%;
+}
+
+.product_rc .name{
+	height:40px;	
+	line-height:20px;
+	white-space: normal;
+ 	word-wrap: break-word;
+  	word-break: break-all;
+	overflow:hidden;
+}
+.product-grid .name a{
+	color:#333;
+	text-decoration:none;
+	display:block;
+	margin-bottom:4px;
+	font-weight:bold;
+	padding-top:10px;	
+}
+.product .name a{
+	font-size:20px;
+	color:#362e2b;	
+}
+/*未使用*/
+.product .tag {
+  padding: 10px 0;
+  color: #362e2b;
+  font-size: 13px;
+  overflow: hidden;
+}
+
+
+.product .subtitle{
+	/*border:1px solid purple;*/
+	padding:10px 0;
+	color:#362e2b;
+	font-size:13px;
+	overflow:hidden;
+}
+.product-grid .price{
+	/*border:1px solid blue;*/
+	display:block;
+	color:#ff3333;
+	margin-bottom:5px;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;	
+}
+.product .price{
+	
+	padding:0px 5px;	
+}
+.product .price_new {
+  font-weight: bold;
+  font-size: 24px;
+  color: #F00;
+  position: absolute;
+  bottom: 50px;
+}
+.product-grid .price_old {
+  color: #898989;
+  text-decoration: line-through;
+  font-size: 14px;
+  position: absolute;
+  bottom:80px;
+}
+
+.product .cart-info {
+  /*border:1px solid black;*/
+  padding: 10px 0px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0px;
+}
+.product-grid .cart {
+  margin-bottom: 3px;
+  width: auto;
+}
+.product .cart-info .cart .btn {
+  width: 110px;
+  height: 30px;
+  background-color: inherit;
+  border: none;
+  background:url(../images/gouwuche.png) no-repeat center center;
+  text-indent: -1000em;
+}
+
+.cart .btn {
+  padding: 4px 0px;
+  background-color: #00a79d;
+  color: #fff;
+  border: 1px solid #00a79d;
+}
+
+.btn {
+  -moz-border-color: none;
+  background-color: #F5F5F5;
+  background-repeat: repeat-x;
+  border-color: #CCCCCC #CCCCCC #B3B3B3;
+  border-image: none;
+  border-radius: 4px 4px 4px 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding: 4px 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ 
+ 
