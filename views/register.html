@@ -1,0 +1,107 @@
+{include file="header_nohead.html"}
+
+<link href="css/register.css" rel="stylesheet" type="text/css">
+
+<script src="js/register.js" type="text/javascript"></script>
+
+<div class="register-headbg">
+
+     <div class="register-head">
+        <div class="login-block">
+            <span>已有账号？ </span>
+            <a href="index.php?route=login">登录</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- register背景   -->
+<div class="register-bg">
+    <!--register开始-->
+    <div class="register">
+        <!-- register左边 -->
+        <div class="register_left">
+
+             <div class="register-logo">
+                <a href="index.php?route=home">
+                <h1 id="logo-img">
+                  <li id="logo_name">菜小兜</li>
+                  <li id="http">caixiaodou.com</li>
+               </h1>
+              </a>
+
+            </div>
+
+            <div class="register_left-img">
+                 
+                <a><img src="images/adverts/advert5.jpg"/></a>            
+            </div>  
+                    
+        </div>
+        <!-- register左边 -->
+        
+        <!-- register右边 -->    
+        <div class="register_right"> 
+            <form class="register_right_down" action="index.php?route=register" method="post" onsubmit = "return checkInput()" autocomplete="off"><!--注册表单-->
+                <div class="register_seg" id="mseg"> <!--表单开始-->
+                    <li>
+                        <span class="star">*</span>
+                        <span class="text">用户名称</span>
+                        <input class="frame" type="text" name="name"  />
+                        <p id="name"></p>
+                    </li>
+           
+                     <li>
+                        <span class="star">*</span>
+                        <span class="text">手机号码</span>
+                        <input class="frame" id="phNum" type="text" name="phNum" />
+                        <p id="phnum"></p>
+                    </li>
+
+                    <li id="btn">
+                        <input type="button" class="btn-normal" value="免费获取短信动态码">
+                    </li>
+
+                    <li>
+                        <span class="star">*</span>
+                        <span class="text">动态号码</span>
+                        <input class="frame" type="text" name="phP" /> 
+                        <p id="phpass"></p>     
+                    </li>
+            
+                    <li>
+                        <span class="star">*</span>
+                        <span class="text">创建密码</span>
+                        <input class="frame" type="password" name="pass" />
+                        <p id="passwd"></p>
+                    </li>
+                           
+                    <li >
+                        <span class="star">*</span>
+                        <span class="text">确认密码</span>
+                        <input class="frame" type="password" name="passf" />
+                        <p id="frpasswd"></p>
+                    </li>
+
+                    <li>
+                        <input class="submit_btn" id="submit_btn" type="submit" value="同意以下协议注册" style="cursor:pointer"/>
+                    </li> 
+
+                    <li>
+                        <span>&nbsp;&nbsp;<a class="vip">《菜小兜用户协议》</a></span>
+                    </li>   
+                </div>
+                <!--表单结束-->  
+            </form>
+            <!--注册表单结束-->
+         </div>
+         <!-- register右边 --> 
+
+     </div>
+    <!--register结束-->  
+</div>
+<!-- register背景   -->
+
+
+  
+  {include file="footer.html"}

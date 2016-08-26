@@ -1,0 +1,153 @@
+{include file="header.html"}
+
+<link href="css/caidou.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/caidou.js"></script>
+<script src="js/jquery-2.0.2.min.js" type="text/javascript"></script>
+
+<!-- step-bg -->
+<div class="step-bg">
+
+    <!-- step开始 -->
+    <div class="buy-process-container">
+
+        <!-- step内容 -->
+        <ol class="step-container">
+            <!-- <span>d</span> -->
+            <li class="step current" style="25%" id="step1">查看菜篮</li>
+
+            <li class="step" style="25%" id="step2">提交订单</li>
+
+            <li class="step" style="25%" id="step3">选择支付方式</li>
+
+            <li class="step" style="25%" id="step4">购买成功</li>
+
+        </ol> 
+        <!-- step内容 -->
+    </div>
+    <!-- step结束 -->
+   
+</div>
+<!-- step-bg -->
+
+
+<div class="basket-body">
+
+    {if $myCart }
+
+    <!-- 菜兜表格开始 -->
+    <div class="basket">
+
+        <!-- 菜兜表格 table开始 -->
+        <table id="basketTable">
+
+            <!-- 表头 -->
+            <thead>
+                <tr>
+                    <th><label><input class="check-all check" type="checkbox" />&nbsp;全选</label></th>
+                    <th>菜品</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <!-- 表头结束 -->
+
+            <!-- 表体 -->
+            <tbody>
+
+                {section name=cart loop=$myCart}
+                <tr>
+                    <td class="check-box"><input class="check-one check"type="checkbox" />
+                    </td>
+
+                    <td class="goods"><a href="index.php?route=details&id={$myCart[cart].productId}" target="_blank"><img title="" src="{$myCart[cart].imgRoot}{$myCart[cart].imgName}" alt="goods" /></a><span></span>
+                    </td>
+
+                    <td class="price">{$myCart[cart].productPrice}
+                    </td>
+
+                    <td class="count"><span class="reduce">-</span>
+                    <input class="count-input"    type="text" value="{$myCart[cart].productNum}" />
+                       <span class="add">+</span>
+                    </td>
+
+                    <td class="sub-total">{$myCart[cart].priceTotal}
+                    </td>
+
+                    <!-- 隐藏productId，传值到js文件 -->
+                    <td class="operation"><span class="delete">删除</span><input class="count-input"    type="hidden" value="{$myCart[cart].productId}" />
+                    </td>
+                </tr>
+                {/section}              
+            </tbody>
+            <!-- 表体结束 -->
+
+        </table>
+        <!-- 菜兜表格 table结束 -->
+    </div>
+    <!-- 菜兜表格结束 -->
+        
+
+    <!-- 脚部信息 -->
+    <div class="foot" id="foot">
+
+        <label class="fl selectAll">
+            <input type="checkbox" class="check-all check" />&nbsp;全选
+        </label>
+
+        <a href="javascript:;" class="fl delete" id="deleteAll">删除</a>
+
+        <div class="fr costing">
+            <a href="index.php?route=pay">结&nbsp;算</a>
+        </div>
+
+        <div class="fr total">合计：￥<span id="priceTotal">0.00</span>
+
+        </div>
+
+        <div class="fr selected" id="selected">已选商品
+            <span id="selectTotal">0</span>件
+            <!-- <span class="arrow up">︽</span>
+            <span class="arrow down">︾</span> -->
+        </div>
+
+        <div class="selected-view">
+            <div id="selectedViewList" class="clearfix">
+                <!-- <div><img src="images/1.jpg"><span>取消选择</span></div> -->
+            </div>
+            <!-- <span class="arrow"><span></span></span> -->
+        </div>
+    </div>
+    <!-- 脚部信息 -->
+
+    {else}
+    <!-- 菜篮空空 -->
+    <div class="empty">
+        <div class="food-no">
+            <h2 id="note">您的菜篮还是空的，赶紧选菜吧！</h2>
+            <ul>
+                <li class="action">
+                    <span>开始</span>
+                    <a href="index.php?route-home" target="_blank">点菜</a>
+                </li>
+
+                <li class="action">
+                    <span>查看</span>
+                    <a href="index.php?route=member" target="_blank">订单</a>
+                </li>
+            </ul>
+            
+        </div>
+        
+    </div>
+    <!-- 菜篮空空 -->
+
+    {/if}
+
+</div>
+<!-- 菜篮 body -->
+
+    
+{include file="footer.html"}

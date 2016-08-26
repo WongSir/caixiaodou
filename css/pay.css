@@ -1,0 +1,270 @@
+.step-bg {
+    width: 1260px;
+    margin: 0 auto;
+    /*border:1px solid red;*/
+}
+
+.buy-process-container {
+    width: 1170px;
+    margin: 0 auto;
+    margin-top: 13px;
+    /*border:1px solid red;*/
+
+}
+
+.buy-process-container .step-container {
+    width: 100%;
+    box-sizing: border-box;
+    background: 0 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.step-container .step {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    font-size: 14px;
+    color: #999;
+    line-height: 30px;
+    _line-height: 29px;
+    /*text-align: center;*/
+    margin-left: 6px;
+
+    background-image:url(../images/icons/step.png);
+    background-repeat:no-repeat;
+    padding-bottom: 2px;
+    background-position:bottom left;
+}
+
+.step-container .current {
+    color: #666;
+    font-size: 15px;
+
+    background-image:url(../images/icons/step-current.png);
+    background-repeat:no-repeat;
+    padding-bottom: 2px;
+    background-position:bottom left;
+}
+
+
+#container{
+	width: 1040px;
+	height: auto;
+	margin: 0 auto;
+	/*border:1px solid blue;*/
+}
+div#messeges {
+  margin-top: 48px;
+  margin-left: 30px
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+#mask{
+	width: 100%;
+	height: 1000px;
+	background-color: #666;
+	opacity: 0.6;
+	filter: alpha(opacity=50); 
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1000;
+}
+#address{
+	width: 420px;
+	height: 241px;
+	padding: 30px;
+	background-color: #F0FBF3;
+	/*border: 1px solid blue;*/
+	position: fixed;
+	left: 30%;
+	top: 35%;
+	z-index: 1001;
+}
+#subAddress{
+	float: right;
+	text-align: center;
+	border: 1px solid #E25850;
+}
+#address #seHead{
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	background-color: #F7F7F7;
+}
+.Input{
+	width: 279px;
+	height: 30px;
+	margin-left: 10px;
+	color: gray;
+	border-color: transparent;
+  border: 1px solid #aaa;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+	/*border:none;*/
+}
+
+#usName {
+	width: 278px;
+	/*background-image:url(../images/icons/user.png);
+ 	background-repeat:no-repeat;
+ 	padding-left:21px;
+ 	background-position:left center;*/
+}
+
+#usPhone {
+	width: 278px;
+	/*background-image:url(../images/icons/phone.png);
+	background-repeat:no-repeat;
+	padding-left:21px;
+	background-position:left center;*/
+}
+
+#changeTime {
+	float: right;
+	height: 23px;
+    width: 56px;
+    background-color: transparent;
+    color: #E5511D;
+	border:1px solid #E25850;
+	border-radius: 2px;
+}
+#subMit{
+	float: right;
+	height: 26px;
+	width: 81px;
+	background-color: transparent;
+    color: #E5511D;
+	border:1px solid #E25850;
+	border-radius: 2px;
+	margin-top: 23px;
+}
+#address p{
+	color: #666;
+}
+hr{
+	border: 0.1px solid #CCCCCC;
+}
+
+#step img{
+    width: 1040px;
+    height: 50px;
+    margin-top: 33px;
+    margin-bottom: 28px;
+}
+
+#messeges h2{
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #666;
+}
+#messeges hr{
+	border: 1px solid  #E25850;
+}
+#messeges #mhead{
+	font-size: 22px;
+	color: #666;
+}
+#messeges #conf{
+	padding: 30px;
+	padding-top: 10px;
+	/*border: 1px solid  #D51B20;*/
+
+}
+#messeges label{
+	color: #666;
+	font-size: 16px;
+	/*padding: 10px;*/
+}
+#messeges label,#messeges span{
+	font-size: 16px;
+}
+#ahead input{
+	width: 88px;
+	height: 31px;
+	color: #E5511D;
+	font-size: 16px;
+	background-color: transparent;
+	border:1px solid #E25850;
+	border-radius: 2px;
+	margin-top: 10px;
+}
+#btn1 input:hover{
+	color: #E25850;
+	cursor: pointer;
+}
+#money #btn2 input:hover{
+	color: #666;
+	cursor: pointer;
+}
+#messeges #pay{
+	/*border-top: 1px solid  #E25850;*/
+	margin-top: 30px;
+}
+
+#messeges #pay img{
+	width: 80px;
+	height: 26px;
+}
+#messeges #pay td{
+	padding:5px;
+}
+#messeges #pay label{
+	font-size: 18px;
+	color: #E25850;
+}
+#messeges #skin{
+	margin-top: 26px;
+}
+#messeges #money{
+	padding-top: 10px;
+	text-align: right;
+	/*border: 1px solid  #D51B20;*/
+}
+#messeges #money #prsum label,#messeges #money #prsum span{
+	font-size: 13px;
+	color: #666;
+}
+#messeges #money #prsum label{
+	padding-right: 17px;
+}
+#messeges #money #prsum input{
+	padding-right: 13px;
+}
+#messeges #money #resum label,#messeges #money #resum span{
+	font-size: 16px;
+}
+#messeges #money #prsum{
+	padding-bottom: 10px;
+}
+#messeges #money #resum span{
+	color: #E25850;
+}
+#messeges #money #btn2 input{
+	width: 120px;
+	height: 31px;
+	color: #E5511D;
+	font-size: 16px;
+	background-color: transparent;
+	border:1px solid #E25850;
+	border-radius: 2px;
+	margin-top: 10px;
+}
+
+
+
+#choise{
+	/*float: right;*/
+	width:275px;
+	height: 25px;
+	/*border: 1px solid blue;*/
+}

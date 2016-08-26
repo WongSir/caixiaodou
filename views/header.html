@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <!-- <meta charset="utf-8"> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- <meta charset="utf-8"> -->
+  <title>菜小兜</title>
+
+  <link href="css/header.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+  <!-- 头部信息 -->
+  <header id="header-h">
+
+    <!-- 头部底色 -->
+    <div class="header-bg">
+      <!-- 头部body -->
+      <div class="header-body">
+        <!-- 头部信息 -->
+        <div class="header"> 
+          <ul class="basic-info">
+
+              {nocache} {if isset($smarty.session.loginFlag) && $smarty.session.loginFlag}
+            <li class="user"> 
+              <a id="login" href="index.php?route=member">
+                <span id="nameB" >{$smarty.session.userName}</span>
+              </a>
+            </li>
+
+             {else}
+            <li class="user">
+              <a id="login" href="index.php?route=login">嘿，请登录</a>
+              <a id="register" href="index.php?route=register">免费注册</a> 
+            </li>
+
+            {/if}  {/nocache}
+
+          </ul>
+         
+     
+          <ul class="user-guid">
+            <li>
+              <a href="index.php?route=home">首页</a>
+              <b class="head">|</b>
+            </li>
+
+            <li>
+              <a href="index.php?route=member">我的订单</a>
+              <b class="head">|</b>
+            </li>
+
+            <li>
+              <a href="index.php?route=member">我的小兜</a>
+              <b class="head">|</b>
+            </li>
+
+            <li>
+              <a href="#">美食秘笈</a>
+              <b class="head">|</b>
+            </li>
+
+            <a href="index.php?route=caidou">
+              <li id="basket">
+              <span class="{if isset($smarty.session.style)}{$smarty.session.style}{else}less{/if}" id="myFood">
+                {nocache}
+                {if isset($smarty.session.myFood)}{$smarty.session.myFood}
+                {else}0
+                {/if}
+                {/nocache}
+              </span>
+              </li>
+            </a>                           
+          </ul>
+        </div> 
+        <!-- 头部信息   -->
+      </div>
+      <!-- 头部body -->
+      
+    </div>
+    <!-- 头部底色 -->
+  </header>
+  <!-- 头部信息 -->
+  
+  <!-- brand-body -->
+  <div class="brand-body">
+    <!-- logo等信息brand -->
+    <div class="brand">
+
+      <!-- logo -->
+      <div class="logo">
+        <a href="index.php?route=home">
+        <h1 id="logo-img">
+          <li id="logo_name">菜小兜</li>
+          <li id="http">caixiaodou.com</li>
+       </h1>
+      </a>
+      </div> 
+      <!-- logo -->
+
+      <!-- 搜索输入框 -->
+      <div id="nav-search">
+        <form class="serach-box-form" name="searchForm" method="get">
+         
+          <input tabindex="1" type="text" name="product" autocomplete="off" class="search-box_input" value placeholder="{if isset($smarty.session.notice) }{$smarty.session.notice}{/if}" />
+
+          <input type="submit" class="search-box_btn" hidefocus="true" value="" data-mod="sr" />
+          
+        </form>
+      </div>
+      <!-- 搜索输入框 -->
+    
+  </div>
+  <!-- logo等信息brand  -->    
+</div>
+<!-- brand-body -->
+
+

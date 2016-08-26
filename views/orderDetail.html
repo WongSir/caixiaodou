@@ -1,0 +1,35 @@
+{section name=order loop=$userOrder}
+ <tr id="head">
+    <td colspan="2" class="head" align="left">{$userOrder[order].orderFlag}订单</td>
+   
+</tr>
+<tr>
+    <td class="head"  align="left" >订单编号:</td>
+    <td class="details" >{$userOrder[order].orderNumber}</td>
+</tr>
+<tr>
+    <td class="head" align="left" >用户姓名:</td>
+    <td class="details" >{$userOrder[order].userName}</td>
+</tr>
+<tr>
+    <td class="head" align="left" >手机号码:</td>
+    <td class="details">{$userOrder[order].userPhone}</td>
+</tr>
+<tr>
+    <td class="head" align="left" >订单状态</td>
+    <td class="details">{$userOrder[order].orderFlag}</td>
+</tr>
+<tr>
+    <td class="head" align="left" >取菜时间</td>
+    <td class="details">{$userOrder[order].orderTime}</td>
+</tr>
+<tr>
+    <td class="head" align="left" >订单金额</td>
+    <td class="details">{$userOrder[order].orderAmount} ￥</td>
+</tr>
+    <td class="head" align="left" >取菜地址</td>
+    <td class="details">{$userOrder[order].orderAddress}</td>
+</tr>
+
+{/section}
+                     

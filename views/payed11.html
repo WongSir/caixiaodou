@@ -1,0 +1,25 @@
+
+{include file="header_child.html"}
+
+<script type="text/javascript" src="js/pay.js"></script>
+
+<link href="css/pay.css" rel="stylesheet" type="text/css" />
+
+<select style="display:none" name="place" id="Adderss" size="1">
+        <div id="container"><!-- 主体部分开始 -->
+            <div id="step"><!-- 交易步骤指示图区 -->
+                <img src="images/pay-step3.png" alt="交易步骤2" />
+            </div><!-- 交易步骤指示图区 -->
+            <div id="masseges"><!-- 提示信息区 -->
+                <img id="tips" src="images/payed-tips.png" alt="提交订单成功" />
+                <p><label>订单号：<span>123456789</span></label></p>
+                <p><label>应付金额：<span>￥130.50</span></label></p>
+                <p><label>实付金额：<span>￥130.00</span></label></p>
+                <p><label>请您在提交订单后<span style="color:red;"> 30 </span>分钟内完成支付，否则订单自动取消哦。</label></p>
+                <a href="#" id="btn"><span id="paying">立即付款</span></a>
+                <img id="alipay" src="images/pay-style.png" alt="支付宝" />
+            </div><!-- 提示信息区 -->
+        </div><!-- 主体部分结束 -->
+       
+
+{include file="footer.html"}

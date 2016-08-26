@@ -1,0 +1,61 @@
+#container{
+	width: 1040px;
+	height: auto;
+	margin: 0 auto;
+	/*border:1px solid blue;*/
+}
+#step img{
+    width: 1040px;
+    height: 59px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+#masseges{
+	/*border:1px solid blue;*/
+	width: 710px;
+	height: 325px;
+	background-color: #FFCD9C;
+	margin-bottom: 35px;
+}
+#masseges #tips{
+	/*margin-left: 3px;*/
+	margin-top: 15px;
+	margin-bottom: 26px;
+}
+#masseges p{
+	font-family: "Arial Regular","Arial";
+	font-weight: 400;
+	font-size: 16px;
+	color: #333;
+	text-align: left;
+	margin-bottom: 8px;
+	margin-left: 44px;
+}
+#masseges #btn{
+	/*border:1px solid blue;*/
+	float: left;
+	display: block;
+	width: 127px;
+	height: 40px;
+	margin-left: 46px;
+	margin-top: 29px;
+	padding-top: 9px;
+	border-bottom:2px solid gray;
+	border-right:2px solid gray;
+	border-radius: 5%;
+	background-color: #D51B20;
+}
+#masseges #alipay{
+	float: left;
+	width: 129px;
+	height: 39px;
+	margin-left: 60px;
+	margin-top: 50px;
+	/*border:1px solid blue;*/
+}
+#masseges #btn #paying{
+	padding-left: 19px;
+	font-size: 22px;
+	font-weight: bolder;
+	color: #000;
+}

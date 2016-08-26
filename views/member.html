@@ -1,0 +1,164 @@
+{include file="header.html"}
+<link href="css/member.css" rel="stylesheet" type="text/css">
+
+<script src="js/member.js" type="text/javascript"></script> 
+
+<div class="member"><!--member区开始--> 	
+    <div class="mem_left "><!--订单及用户信息开始--> 
+        <ul>
+            <li class="_head">订单管理</li>
+            <li class="_body" id="0" value="all">我&nbsp;的&nbsp;&nbsp;订单&nbsp;<span>{$smarty.session.all}</span></li>
+            <li class="_body" id="1" value="paying">待付款订单&nbsp;<span id="span_pay">{$smarty.session.paying}</span></li>
+            <li class="_body" id="2" value="taking">待取菜订单&nbsp;<span>{$smarty.session.taking}</span></li>
+            <li class="_body" id="3" value="done">已完成订单&nbsp;<span>{$smarty.session.done}</span></li>
+            <li class="_body" id="4" value="cancled">已取消订单&nbsp;<span id="span_cancle">{$smarty.session.cancled}</span></li>
+            <li class="_head">用户信息</li>
+            <li class="_user">编辑用户信息</li>
+            <li class="_user">修改用户密码</li>
+            <li class="_head"><a href="index.php?route=loginout">退出系统</a></li>
+         </ul>
+
+    </div><!--订单及用户信息结束-->
+
+    <div  id ="show" class = "menu_right_order"> <!-- 个人中心右边部分 -->
+       
+        <div id="orderFlag">
+      
+        </div>   
+     
+    </div>    <!-- 个人中心右边部分 -->
+     
+
+    <!-- 个人中心右边部分 -->
+    <div  id ="" class = "menu_right"> 
+        <!-- 小右区 -->
+        <div class="subRight">
+            <!-- 信息区 编辑用户信息-->
+            <form id="r_left" action="#" >
+                <table>
+                    <tbody>
+                        <tr id="h3">
+                            <td>编辑用户信息</td>
+                        </tr>
+                        <tr>
+                            <td><span class="star">*</span>
+                            <span>手机号码：</span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="chngInput_phNum" name="phNum" value="{$smarty.session.userTel}" readonly /></td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="star">*</span>
+                            <span>昵称：<p id="nickName"></p></span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="chngInput_name" name="name" value="{$smarty.session.userName}" onkeypress="getKey();" /></td>
+                        </tr>
+                        <tr>
+                            <td><span>&nbsp;&nbsp;性别：</span>
+                            <input type="radio" name="salution" onkeypress="getKey();" value = "男" {$smarty.session.checkM} /><span>男</span>
+                            <input type="radio" name="salution" onkeypress="getKey();" value = "女" {$smarty.session.checkF} /><span>女</span>
+                             <input type="radio" name="salution" onkeypress="getKey();" value = "保密" {$smarty.session.checkO} /><span>保密</span>
+                            </td>
+                     
+                        </tr>                              
+                        <tr>
+                            <td>
+                                <span>&nbsp;&nbsp;电子邮箱：<p id="emailAdr"></p>
+                                </span>
+                            </td>   
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="text" id="chngInput_exp" name="email" value="{$smarty.session.email}" onkeypress="getKey();" />
+                            </td>
+                        </tr>
+                      
+                        <tr>
+                            <td>
+                                <input class = "button" onclick="userModify()" onkeypress="getKey();" value="点击保存修改" />
+                            </td>
+                        </tr>
+                    </tbody> 
+                </table>
+            </form>
+            <!-- 信息区 -->
+        </div>
+        <!-- 小右区 -->
+    </div>
+    <!-- 个人中心右边部分 -->
+
+    <!-- 个人中心右边部分 -->
+    <div  id ="" class = "menu_right"> 
+        <!-- 小右区 -->
+        <div class="subRight">
+            <!-- 信息区 修改密码-->
+            <form id="r_left" action="#">
+                <table>
+                   
+                    <tbody>
+                        <tr id="h3">
+                            <td>修改用户密码
+                            </td>
+                        </tr>   
+                        
+                        <tr>
+                            <td>
+                                <span class="star">*</span>
+                                <span>原来密码：</span>
+                                <span id="boolPassTrue">{if isset($smarty.session.boolRegister)} {$smarty.session.boolRegister} {/if}
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                             <input type="password" id="chngInput_OldPass" name="pass" value="" onkeypress="getKey1();" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                            <span class="star">*</span>
+                            <span>新密码：</span>
+                            <span id='NewPass'></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" id="chngInput_NewPass" name="Npass" value = "" onkeypress="getKey1();" />
+                            </td>
+                        </tr>                                                                              
+                        <tr>
+                            <td>
+                                <span class="star">*</span>
+                                <span>确认新密码：</span>
+                                <span id="Passf"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" id="chngInput_Passf" name="Npassf" value = "" onkeypress="getKey1();" />
+                            </td>
+                        </tr>
+                      
+                        <tr>
+                            <td>
+                                <input class = "button buttonPass" onclick="userPassChange()" onkeypress="getKey1();" value="点击保存修改" />
+                            </td>
+                        
+                        </tr>
+                    </tbody> 
+                </table>
+            </form>
+            <!-- 信息区 -->
+        </div>
+        <!-- 小右区 -->
+    </div>
+    <!-- 个人中心右边部分 -->
+</div>
+<!--member区结束-->  
+
+
+{include file = "footer.html"}
+

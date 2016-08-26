@@ -1,0 +1,261 @@
+.register-headbg {
+	background-color: #F2F2F2;
+}
+
+.register-bg {
+	width: 100%;
+	margin: 0 auto;
+	background-color: #FBFBFB;
+}
+
+.register-head {
+	width: 1170px;
+	margin: 0 auto;
+	height: 30px;
+}
+
+.register-head .login-block {
+	/*float: right;*/
+	margin-left: 1010px;
+	padding-top: 36px;
+}
+
+.login-block span {
+	font-size: 13px;
+}
+
+.login-block a {
+	font-size: 18px;
+	/*border: 1px solid #E25850;*/
+	/*background-color: #E25850;*/
+	color: #E25850;
+	/* border-radius: 2px; */
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+} 
+
+ .register
+ {
+	width:1170px;
+	height:496px;
+	background: #FBFBFB;
+	margin: 0 auto; 
+ }
+ .register_left
+ {
+	/* background:url(../images/login_adv.jpg);*/
+	float:left;
+	width:460px;
+	height:455px;
+	margin-top: -11px;
+ }
+
+.register .register-logo {
+  float: left;
+  padding: 48px 0px 21px 66px;
+}
+
+.register #logo-img {
+  background-image: url(../images/icons/logo.png);
+  background-repeat: no-repeat;
+  padding-left: 58px;
+}
+
+.register #logo-img #logo_name {
+  font-size: 31px;
+  color: #E25850;
+  margin-left: 6px;
+  /*padding-top: 7px;*/
+}
+
+.register #logo-img #http {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: -7px;
+}
+
+.register_left img
+ {
+	width:460px;
+	height:383px; 
+	margin-left: 119px;	
+ }
+
+ .register_right {
+ 	float:right;
+ 	margin-top: 56px;
+ }
+ 
+ .register_right_up
+ {	
+	 width:356px;
+	 height:40px;
+	 float:right;
+	 margin-top:21px;
+ }
+
+ .register_right_down
+ {
+	float:right;
+	width:550px;
+	height:405px;
+	background-color: #FBFBFB;
+	/*border: 1px solid #aaa;*/
+ }
+
+.register_seg li {
+	margin-top: 21px;
+}
+
+
+
+li#btn {
+	margin: 8px 0px -6px 60px;
+}
+
+/*li#pw {
+	margin: 3px 0px -13px 92px;
+}
+
+#pw span {
+	width: 100px;
+	text-align: center;
+}*/
+
+ span.text
+ {
+	 font-size:15px;
+	 display: inline;
+	 color: #666;
+	 font-family: inherit;
+ }
+  span.text0
+ {
+	font-size:15px;
+	margin-left:31px;
+	display: inline;
+	color: #666;
+	font-family: inherit; 
+ }
+ 
+ .text1 a
+ {
+	 float:right;
+	 width:110px;
+	 line-height:30px;
+	 font-size:18px;
+	 padding-left:4px;
+ }
+ 
+  .text2
+ {
+	 float:right;
+	 width:80px;
+	line-height:30px;
+	 font-size:16px;
+	 padding-left:10px;
+	 margin-right: 5px;
+ }
+ 
+  .text3
+ {
+	 float:left;
+	 width:125px;
+	 padding-right:11px;
+	 line-height:29px;
+	 font-size:28px;
+ }
+ 
+ span.star
+ {
+	 margin-left:6px;
+	 color:#E25850;
+	 font-size:14px;
+	 
+ }
+ 
+ #mseg p{
+ 	margin-left: 10px;
+ 	display: none;
+ 	color: #666;
+	font-size:12px;
+ }
+  
+ input.frame{
+	margin-left: 11px;
+	width: 231px;
+	height: 31px;
+	border-color: transparent;
+	border: 1px solid #aaa;
+	/*border-radius: 2px;*/
+ 	-webkit-border-radius:2px;
+  	-moz-border-radius:2px;
+ }
+
+input.frame:focus {
+	border: 1px solid #97B9F1;
+}
+
+.btn-normal {
+	margin-left: 30px;
+	color: #333;
+	background-color: #dedede;
+	border: 1px solid #e3e3e3;
+	border-bottom: 1px solid #aaa;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF7F7F7', endColorstr='#FFDEDEDE');
+	background-image: -owg-linear-gradient(top,#f7f7f7,#dedede);
+	background-image: -webkit-linear-gradient(top,#f7f7f7,#dedede);
+	background-image: -moz-linear-gradient(top,#f7f7f7,#dedede);
+	background-image: -o-linear-gradient(top,#f7f7f7,#dedede);
+	background-image: linear-gradient(top,#f7f7f7,#dedede);
+}
+.btn-mini, .btn-small {
+  font-weight: 400;
+  -webkit-font-smoothing: initial;
+}
+
+input.chack
+ {
+	 margin-left:31px;
+	 height:29px;
+	 color:#666;
+ }
+ input.submit_btn
+ {
+	margin-left: 93px;
+	margin-bottom: -5px;
+	border: 1px solid #E25850;
+	background-color: #E25850;
+	font-size: 14px;
+  	font-weight: 700;
+	width: 188px;
+	height: 36px;
+	margin-top: 16px;
+	color: #f9f9f9;
+	/* border-radius: 2px; */
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+ }
+
+ a.vip {
+  	 margin-left: 77px;
+  	color: #EB6961;
+  	font-size: 14px;
+}
+ 
+ /*.footer img
+ {
+	 margin:0 auto;
+ }*/
+ 
+ /*.verify 
+ {
+ 	margin-left: 30px;
+ 	width: 90px;
+ }*/
+/* span.boolRegister
+ {
+	 margin-left:31px;
+	 color:#E25850;
+	 font-size:13px; 
+ }*/

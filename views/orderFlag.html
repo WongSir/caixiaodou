@@ -1,0 +1,112 @@
+{if $smarty.session.result } 
+<caption ><span id="orderFlag">{$smarty.session.orderFlag}：</span></caption>
+<table>
+
+        <thead>
+              <tr>
+                <th>订单号</th>
+                <th>订单商品</th>
+                <!-- <th>收货人</th> -->
+                <th>合计</th>
+                <th>取菜时间</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>            
+        </thead>
+          <tbody>
+        {section name=order loop=$userOrder}
+      
+            <tr>
+                <td class="boxNo">{$userOrder[order].orderNumber}
+                </td>
+
+                <td class="goods">
+                 {section name=product loop=$userOrder[order].orderProduct}
+                    <div>
+                    <a href="index.php?route=details&id={$userOrder[order].orderProduct[product].productId}"><img src="{$userOrder[order].orderProduct[product].imgRootS}"  alt="goods" class = "gsimg"/>
+                    </a>
+                    <span>
+                        <img src="{$userOrder[order].orderProduct[product].imgRootL}" alt="goods" class = "bigGsimg"/>
+                    </span>
+                    </div>
+
+                    {/section}
+                </td>
+
+                <!-- <td class="Name" >{$userOrder[order].userName} </td> -->
+
+                <td class="allPrice" >{$userOrder[order].orderAmount}￥</td>
+                <td class="time" >{$userOrder[order].orderTime}</td>
+                <td class="status" >{$userOrder[order].orderFlag} </td>
+
+                <td class="operation">
+                 {if $userOrder[order].orderFlag =='待付款'}
+                <span><a id="pay" href="javascript:pay({$userOrder[order].orderId})">付款</a></span> 
+                </br>                  
+                {/if}
+
+                <span >
+                <a class="do " id="detail"  href="javascript:showDetail({$userOrder[order].orderId})">详情</a>
+                </span>
+                
+                {if $userOrder[order].orderFlag =='待付款'}
+                 <span>
+                <a class="do" id="cancle" href="javascript:cancle({$userOrder[order].orderId})">取消</a>
+                </span>
+                <input id="cancled" value="{$smarty.session.cancled}" style="display:none" >
+                 </input>
+                {/if}
+
+                {if $userOrder[order].orderFlag =='待取菜'}
+                <span >
+                <a class="do " id="detail"  href="javascript:showDetail1({$userOrder[order].orderId})">确认</a>
+                </span>
+                {/if}
+
+                </td> 
+
+            </tr>
+
+            <tr >
+            
+                <img id="out" style="display:none;" src="images/icons/out.png">
+                <tbody id="tb_detail" style="display:none;">
+                   
+                </tbody>
+            </tr>
+
+            {/section}
+           
+            <tr>
+                <td colspan="7">
+                </br>
+                <span class="fy">总共:{$smarty.session.num}页</span>
+                <span class="fy">第:{$smarty.session.page}页</span>
+                 <a href="javascript:fy_onclick('first')" class="fy" id="fy_first">首页
+                 </a>
+                 <a href="javascript:fy_onclick('pre')" class="fy" id="fy_pre">上一页
+                 </a>
+                <a href="javascript:fy_onclick('next',{$smarty.session.num})" class="fy" id="fy_next">下一页
+                 </a>
+                <a href="javascript:fy_onclick('last',{$smarty.session.num})" class="fy" id="fy_last">尾页
+                 </a>
+                
+                </td>
+            </tr>
+
+        </tbody> 
+
+    </table>    
+
+        
+
+
+    {else}
+    <div id="order_n">
+        <li>{$smarty.session.orderFlag}：空空也</li>
+        <li id="tishi"> <a href="index.php?route=home">返回首页</a></li>
+        <!-- <img src="images/order.jpg" width="800" height="300"> -->
+        <img  width="800" height="300">
+    </div>
+    
+     {/if} 

@@ -1,0 +1,63 @@
+ #J_Footer
+ {
+	clear: left;
+  	margin: 0 auto;
+  	width: 1260px;
+  	/*padding-top: 11px;*/
+ }
+ .footer {
+ 	position: relative;
+ 	width: 1170px;
+  	margin: 0 auto;
+  	padding: 21px 0 9px;
+  	border-top: 2px solid #E25850;
+ }
+
+ p.one {
+	font-size: 15px;
+	color: #E25850;
+	margin-left: 3px;
+	margin-bottom: 10px;
+}
+.one b , .two b {
+  	margin:0 3px;
+  	font-weight: 400;
+  	font-size: 15px;
+  	color: #aaa;
+}
+
+p.two {
+  font-size: 12px;
+  color: #666;
+  margin-left: 3px;
+  padding-bottom: 10px;
+  margin-bottom: 21px;
+  border-bottom: 1px solid #aaa;
+}
+
+span#phone {
+	width: 30px;
+	height: 20px;
+	margin-left: 18px;
+	font-size: 15px;
+	background-image: url(../images/icons/phone.png);
+	background-repeat:no-repeat;
+	padding-left:27px;
+ 	background-position:left center;
+}
+span#pnum {
+	margin-left: 6px;
+	font-size: 13px;
+	color: #666;
+}
+
+p#thr {
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+#thr a {
+	padding-left: 6px;
+	color: #333;
+}
